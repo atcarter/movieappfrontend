@@ -7,12 +7,14 @@ const selectMovie = document.getElementById('select-movie');
 reviewForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
+  event.target.reset();
 });
 
 const movieForm = document.getElementById('movie-form');
 movieForm.addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
+  event.target.reset();
 });
 
 
