@@ -6,6 +6,11 @@ class ReviewApi {
   getReviews(){
     fetch(this.port + `/reviews`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      data.forEach(review => {
+        let r = new Review(review)
+        r.showReview()
+      })
+    })
   }
 }
