@@ -14,7 +14,7 @@ class Movie {
 
   showMovie(){
     this.element.innerHTML = `
-    <h2>${this.title} (${this.year})</h2>
+    <h2>${this.title} (${this.year})&emsp;<button type=button id="movie-${this.id}-delete">Delete</button></h2> 
     <p>${this.synopsis}</p>
     <ul id="movie-${this.id}-reviews">
     </ul>
