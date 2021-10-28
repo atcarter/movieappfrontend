@@ -2,8 +2,7 @@ const port = `http://localhost:3000`;
 const reviewCall = new ReviewApi(port);
 const movieCall = new MovieApi(port);
 
-reviewCall.getReviews();
-movieCall.getMovies();
+
 
 const reviewForm = document.getElementById('review-form');
 const reviewUser = document.getElementById('username');
@@ -27,3 +26,6 @@ movieForm.addEventListener('submit', function(event) {
   movieCall.createMovie();
   event.target.reset();
 });
+
+reviewCall.getReviews();
+movieCall.getMovies();
