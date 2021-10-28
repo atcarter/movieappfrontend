@@ -14,7 +14,19 @@ class ReviewApi {
     })
   }
 
-  createReviews(){
-    
+  createReview(){
+    fetch(this.port + `/reviews`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        username: reviewUser.value,
+        rating: reviewRating.value,
+        content: reviewContent.value,
+        movie_id: selectMovie.value
+      })
+    });
   }
 }
