@@ -10,7 +10,7 @@ const selectMovie = document.getElementById('select-movie');
 
 reviewForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
+  reviewCall.createReview();
   event.target.reset();
 });
 
@@ -21,7 +21,7 @@ const movieSynopsis = document.getElementById('synopsis');
 
 movieForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
+  movieCall.createMovie();
   event.target.reset();
 });
 
