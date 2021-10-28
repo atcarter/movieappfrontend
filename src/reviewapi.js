@@ -13,4 +13,8 @@ class ReviewApi {
       })
     })
   }
+
+  createReviews(){
+    
+  }
 }
