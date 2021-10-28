@@ -6,4 +6,9 @@ class Review {
    this.id = id
    this.movie_id = movie_id
   }
+  //need to remove the movies array from the reviews json
+
+  renderReview(){
+
+  }
 }

@@ -6,4 +6,8 @@ class Movie {
     this.synopsis = synopsis
     this.reviews = reviews
   }
+
+  renderMovie(){
+    
+  }
 }
