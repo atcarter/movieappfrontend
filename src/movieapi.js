@@ -14,8 +14,19 @@ class MovieApi {
     })
   }
 
-  createMovies(){
-    
+  createMovie(){
+    fetch(this.port + `/movies`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        title: movieTitle.value,
+        year: movieYear.value,
+        synopsis: movieSynopsis.value
+      })
+    });
   }
 
 
