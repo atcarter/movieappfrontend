@@ -21,5 +21,10 @@ class Movie {
     `
     let ul = document.getElementById('movie-display-ul');
     ul.appendChild(this.element);
+
+    let option = document.createElement('option');
+    option.value = this.id;
+    option.innerText = `${this.title}`
+    selectMovie.appendChild(option);
   }
 }
