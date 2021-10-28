@@ -27,6 +27,11 @@ class ReviewApi {
         content: reviewContent.value,
         movie_id: selectMovie.value
       })
-    });
+    })
+    .then(response => response.json())
+    .then(data => {
+      const rev = new Review(data);
+      rev.showReview(); 
+    })
   }
 }
