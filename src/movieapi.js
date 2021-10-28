@@ -1,11 +1,18 @@
 class MovieApi {
   constructor(port){
-    this.port = port
+    this.port = port;
   }
 
   getMovies(){
     fetch(this.port + `/movies`)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      data.forEach(movie => {
+        let m = new Movie(movie);
+        m.showMovie();
+      })
+    })
   }
+
+
 }
