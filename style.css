@@ -6,3 +6,8 @@ body {
 ul {
   list-style-type: none;
 }
+
+h2 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
