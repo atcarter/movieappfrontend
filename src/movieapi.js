@@ -26,7 +26,12 @@ class MovieApi {
         year: movieYear.value,
         synopsis: movieSynopsis.value
       })
-    });
+    })
+    .then(response => response.json())
+    .then(data => {
+      const mov = new Movie(data);
+      mov.showMovie(); 
+    })
   }
 
 
