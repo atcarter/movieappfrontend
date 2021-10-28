@@ -10,6 +10,10 @@ class MovieApi {
       data.forEach(movie => {
         let m = new Movie(movie);
         m.showMovie();
+        m.reviews.forEach(review =>{
+          let r = new Review(review);
+          r.showReview();
+        })
       })
     })
   }
