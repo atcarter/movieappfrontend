@@ -27,5 +27,6 @@ movieForm.addEventListener('submit', function(event) {
   event.target.reset();
 });
 
-reviewCall.getReviews();
 movieCall.getMovies();
+reviewCall.getReviews();
+
