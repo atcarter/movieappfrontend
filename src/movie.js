@@ -10,11 +10,17 @@ class Movie {
     this.element = document.createElement('li');
     this.element.id = `movie-${this.id}`
     Movie.all.push(this);
+    this.element.addEventListener('click', function(event) {
+      if(event.target.innerText === "Delete"){
+        movieCall.deleteMovie(event);
+      }
+    })
   }
 
   showMovie(){
     this.element.innerHTML = `
-    <h2>${this.title} (${this.year})&emsp;<button type=button id="movie-${this.id}-delete">Delete</button></h2> 
+    <button type=button id="movie-${this.id}-delete">Delete</button>
+    <h2>${this.title} (${this.year})</h2> 
     <p>${this.synopsis}</p>
     <ul id="movie-${this.id}-reviews">
     </ul>
