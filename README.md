@@ -1,6 +1,6 @@
 # Movie-App-JavaScript-Project
 
-This repository is the backend to a movie review web application that allows users to post their own movie reviews. [Here is the link to the backend](https://github.com/atcarter/movieappbackend).
+This repository is the backend to a movie review web application that allows users to post their own movie reviews. [Here is the link to the backend](https://github.com/atcarter/movieappbackend). A user is able to view movies and their relevant reviews, add/delete movies, and add/delete reviews.
 
 ## Installation
 
