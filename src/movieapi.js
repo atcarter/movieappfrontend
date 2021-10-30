@@ -31,6 +31,7 @@ class MovieApi {
     .then(data => {
       const mov = new Movie(data);
       mov.showMovie(); 
+      alert(`${mov.title} was created.`);
     })
   }
 
