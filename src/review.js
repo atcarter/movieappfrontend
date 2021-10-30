@@ -20,7 +20,8 @@ class Review {
 
   showReview(){
     this.element.innerHTML = `
-    <h4>${this.username} &emsp; &emsp; ${"*".repeat(this.rating)}&emsp;<button type=button id="review-${this.id}-delete">Delete</button></h4>
+    <button type=button id="review-${this.id}-delete">Delete</button>
+    <h4>${this.username} &emsp; &emsp; ${"*".repeat(this.rating)}</h4>
     <p>${this.content}</p>
     `
     let ul = document.getElementById(`movie-${this.movie_id}-reviews`);
