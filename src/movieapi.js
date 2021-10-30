@@ -43,6 +43,7 @@ class MovieApi {
     .then(response => response.json())
     .then(json => {
       event.target.parentElement.remove()
+      document.getElementById(`movieoption-${movieId}`).remove();
       alert(json.alert)
     });
   }
