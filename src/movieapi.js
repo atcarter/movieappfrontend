@@ -34,5 +34,10 @@ class MovieApi {
     })
   }
 
+  deleteMovie(event){
+    debugger
+    // const movieId = event.target
+  }
+
 
 }
