@@ -10,7 +10,7 @@ class Review {
    this.element = document.createElement('li');
    this.element.id = `review-${this.id}`
    this.element.addEventListener('click', function(event) {
-     if(event.target.innerText === "Delete"){
+     if(event.target.innerText === "Delete Review"){
        reviewCall.deleteReview(event);
      }
    })
@@ -20,7 +20,7 @@ class Review {
 
   showReview(){
     this.element.innerHTML = `
-    <button type=button id="review-${this.id}-delete">Delete</button>
+    <button type=button id="review-${this.id}-delete">Delete Review</button>
     <h4>${this.username} &emsp; &emsp; ${"*".repeat(this.rating)}</h4>
     <p>${this.content}</p>
     `
