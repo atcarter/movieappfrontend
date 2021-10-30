@@ -30,7 +30,8 @@ class Movie {
 
     let option = document.createElement('option');
     option.value = this.id;
-    option.innerText = `${this.title}`
+    option.id = `movieoption-${this.id}`;
+    option.innerText = `${this.title}`;
     selectMovie.appendChild(option);
   }
 }
