@@ -36,7 +36,6 @@ class ReviewApi {
   }
 
   deleteReview(event){
-    debugger
     const reviewId = event.target.id.split('-')[1];
     event.target.parentElement.remove();
     fetch(this.port + `/reviews/${reviewId}`, {
