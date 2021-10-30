@@ -37,12 +37,12 @@ class MovieApi {
 
   deleteMovie(event){
     const movieId = event.target.id.split('-')[1];
-    event.target.parentElement.remove();
     fetch(this.port + `/movies/${movieId}`, {
       method: "DELETE"
     })
     .then(response => response.json())
     .then(json => {
+      event.target.parentElement.remove()
       alert(json.alert)
     });
   }

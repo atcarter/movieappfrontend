@@ -38,12 +38,12 @@ class ReviewApi {
 
   deleteReview(event){
     const reviewId = event.target.id.split('-')[1];
-    event.target.parentElement.remove();
     fetch(this.port + `/reviews/${reviewId}`, {
       method: "DELETE"
     })
     .then(response => response.json())
     .then(json => {
+      event.target.parentElement.remove()
       alert(json.alert)
     });
   }
