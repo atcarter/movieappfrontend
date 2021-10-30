@@ -32,6 +32,7 @@ class ReviewApi {
     .then(data => {
       const rev = new Review(data);
       rev.showReview(); 
+      alert(`${rev.username} has created a new review.`);
     })
   }
 
