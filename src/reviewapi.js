@@ -12,6 +12,7 @@ class ReviewApi {
         r.showReview()
       })
     })
+    .catch(fail => alert(fail));
   }
 
   createReview(){
@@ -34,6 +35,7 @@ class ReviewApi {
       rev.showReview(); 
       alert(`${rev.username} has created a new review.`);
     })
+    .catch(fail => alert(fail));
   }
 
   deleteReview(event){
@@ -45,6 +47,7 @@ class ReviewApi {
     .then(json => {
       event.target.parentElement.remove()
       alert(json.alert)
-    });
+    })
+    .catch(fail => alert(fail));
   }
 }
