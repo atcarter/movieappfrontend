@@ -12,6 +12,7 @@ class MovieApi {
         m.showMovie();
       })
     })
+    .catch(fail => alert(fail));
   }
 
   createMovie(){
@@ -33,6 +34,7 @@ class MovieApi {
       mov.showMovie(); 
       alert(`${mov.title} was created.`);
     })
+    .catch(fail => alert(fail));
   }
 
   deleteMovie(event){
@@ -45,7 +47,8 @@ class MovieApi {
       event.target.parentElement.remove()
       document.getElementById(`movieoption-${movieId}`).remove();
       alert(json.alert)
-    });
+    })
+    .catch(fail => alert(fail));
   }
 
 
