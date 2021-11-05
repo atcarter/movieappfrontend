@@ -2,6 +2,10 @@ const port = `http://localhost:3000`;
 const reviewCall = new ReviewApi(port);
 const movieCall = new MovieApi(port);
 
+//Create a search feature ex. "star" will show star wars 
+//Need an input, button (Search), event listener (don't reload), on trigger filter using the searched parameters
+
+
 
 
 const reviewForm = document.getElementById('review-form');
@@ -15,6 +19,32 @@ reviewForm.addEventListener('submit', function(event) {
   reviewCall.createReview();
   event.target.reset();
 });
+
+
+const searchForm = document.getElementById('searchbar')
+const searchText = document.getElementById('search')
+
+searchForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const filteredMovies = Movie.all.filter(val => {
+    let title = val.title.toLowerCase();
+    let typed = searchText.value.toLowerCase();
+    if(title.includes(typed)){
+      return val
+    }
+  });
+  
+  const movieDisplay = document.getElementById('movie-display-ul');
+  while (movieDisplay.firstChild) {
+    movieDisplay.removeChild(movieDisplay.firstChild)
+  }
+  
+  filteredMovies.forEach(movie => {
+    movie.showMovie();
+  })
+  
+})
 
 const movieForm = document.getElementById('movie-form');
 const movieTitle = document.getElementById('title');
